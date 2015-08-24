@@ -11,16 +11,16 @@ namespace SmartCA.Infrastructure.RepositoryFramework
         // Dictionary to enforce the singleton pattern
         private static Dictionary<string, object> repositories = new Dictionary<string, object>();
 
-        ///  < summary > 
+        /// <summary> 
         /// Gets or creates an instance of the requested interface. Once a
         /// repository is created and initialized, it is cached, and all
         /// future requests for the repository will come from the cache.
-        ///  < /summary > 
-        ///  <typeparam name="TRepository">  The interface of the repository
-        /// to create. < /typeparam > 
-        ///  <  typeparam name=”TEntity”  > The type of the EntityBase that the
-        /// repository is for. < /typeparam > 
-        ///  < returns > An instance of the interface requested. < /returns > 
+        /// </summary> 
+        /// <typeparam name="TRepository"> The interface of the repository
+        /// to create. </typeparam> 
+        /// <typeparam name="TEntity"> The type of the EntityBase that the
+        /// repository is for. </typeparam> 
+        /// <returns> An instance of the interface requested. </returns> 
         public static TRepository GetRepository<TRepository, TEntity>()
             where TRepository : class, IRepository<TEntity>
             where TEntity : EntityBase
