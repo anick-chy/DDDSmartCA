@@ -21,17 +21,17 @@ namespace SmartCA.Infrastructure
 
         #region IUnitOfWork Members
 
-        public void RegisterAdded(DomainBase.EntityBase entity, IUnitOfWorkRepository repository)
+        public void RegisterAdded(EntityBase entity, IUnitOfWorkRepository repository)
         {
             this.addedEntities.Add(entity, repository);
         }
 
-        public void RegisterChanged(DomainBase.EntityBase entity, IUnitOfWorkRepository repository)
+        public void RegisterChanged(EntityBase entity, IUnitOfWorkRepository repository)
         {
             this.changedEntities.Add(entity, repository);
         }
 
-        public void RegisterRemoved(DomainBase.EntityBase entity, IUnitOfWorkRepository repository)
+        public void RegisterRemoved(EntityBase entity, IUnitOfWorkRepository repository)
         {
             this.deletedEntities.Add(entity, repository);
         }

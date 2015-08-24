@@ -7,7 +7,7 @@ namespace SmartCA.Infrastructure.RepositoryFramework
     {
         T FindBy(object key);
         void Add(T item);
-        T this[object key] { get; set; }
         void Remove(T item);
+        T this[object key] { get; set; }
     }
 }
